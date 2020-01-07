@@ -24,9 +24,9 @@ function App() {
           </nav>
 
          
-            <Route path="/beta-wallet" component={BetaWallet}/>
-            <Route path="/light-wallet" component={LightWallet}/>
-            <Route path="/my-wan-wallet" component={MyWanWallet}/>
+            <Route path="/beta-wallet/" component={BetaWallet}/>
+            <Route path="/light-wallet/" component={LightWallet}/>
+            <Route path="/my-wan-wallet/" component={MyWanWallet}/>
             <Route path="/" component={Home}/>
           
         </Router>
