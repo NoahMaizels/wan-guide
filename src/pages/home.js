@@ -8,11 +8,11 @@ const Home = () => {
     <div className="home">
       <p className="info">Welcome to Wanchain.guide</p>
       <p className="info">This website shows you the different wallets and how to use them</p>
-      <a href="/beta-wallet" className="beta-link preview-link"><img className="preview-image" src={betaImage} alt="Beta Wallet Instructions Video"/>
+      <a href="/#/beta-wallet" className="beta-link preview-link"><img className="preview-image" src={betaImage} alt="Beta Wallet Instructions Video"/>
 </a>  
-<a className="mww-link preview-link" href="/my-wan-wallet"><img className="preview-image" src={mwwImage} alt="MyWanWallet.io Instructions Video"/>
+<a className="mww-link preview-link" href="/#/my-wan-wallet"><img className="preview-image" src={mwwImage} alt="MyWanWallet.io Instructions Video"/>
 </a>
-      <a className="light-link preview-link" href="/light-wallet"><img className="preview-image" src={lightImage} alt="Light Wallet Instructions Video"/>
+      <a className="light-link preview-link" href="/#/light-wallet"><img className="preview-image" src={lightImage} alt="Light Wallet Instructions Video"/>
 </a>
       
     </div>
