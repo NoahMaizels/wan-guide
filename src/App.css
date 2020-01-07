@@ -1,0 +1,143 @@
+
+* {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}
+
+html, body {
+  width: 100%;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.preview-image {
+  width: 300px;
+  margin: 20px;
+}
+
+.beta-link::after{
+  content: "Beta Wallet Instructions";
+  font-size: 1.8rem;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  z-index: 2;
+  transform: translate(-280px, -60px);
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+}
+
+.mww-link::after{
+  content: "MyWanWallet.io Instructions";
+  font-size: 1.8rem;
+  color: black;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  z-index: 2;
+  transform: translate(-280px, -60px);
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+}
+
+.light-link::after{
+  content: "Light Wallet Instructions";
+  font-size: 1.8rem;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  z-index: 2;
+  transform: translate(-280px, -60px);
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+}
+
+.ribbon {
+  background-color: #5BC8F7;
+}
+
+.ribbon::after {
+  content: "This is a fancy orange box.";
+  background-color: #FFBA10;
+  border-color: black;
+  border-style: dotted;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.home {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.home p {
+  font-size: 2rem;
+}
+
+.navbar {
+  background-image: linear-gradient(45deg,#031465 0,transparent 100%);
+  min-width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  line-height: 100px;
+  margin-bottom: 50px;
+}
+
+.video {
+  display: block;
+  margin: auto;
+  width: 640px;
+  height: 360px;
+}
+
+.info {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+iframe {
+  background-color: black;
+}
+
+body {
+  background-image: radial-gradient(at top, rgba(5,44,92, .95) 30%,  rgb(4,42,80) 70% );
+  background-position: left top;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.logo {
+  position: fixed;
+  left: 30px;
+  top: 25px;
+  width: 200px;
+}
