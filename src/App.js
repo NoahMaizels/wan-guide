@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom'
 import Home from './pages/home'
 import BetaWallet from './pages/betawallet'
 import LightWallet from './pages/lightwallet'
 import MyWanWallet from './pages/mywanwallet'
 import logo from './images/wanchain-logo.png'
-import { underline } from 'ansi-colors';
+
 
 function App() {
  
@@ -14,14 +14,13 @@ function App() {
   const navStyle = {fontSize: "1.5rem", color: "white", textDecoration: "none",  marginRight: "30px" }
 
   return (
-    <div className="App">
-        <img class ="logo" src={logo} alt="logo"/>
         <Router>
+          <img class ="logo" src={logo} alt="logo"/>
           <nav className="navbar">
             <NavLink class="navlink" exact to="/" style={navStyle} activeStyle={activeNavStyle}>Home</NavLink>
-            <NavLink class="navlink" to="/beta-wallet" style={navStyle} activeStyle={activeNavStyle}>Beta Wallet</NavLink>
-            <NavLink class="navlink" to="/light-wallet" style={navStyle} activeStyle={activeNavStyle}>Light Wallet</NavLink>
-            <NavLink class="navlink" to="/my-wan-wallet" style={navStyle} activeStyle={activeNavStyle}>MyWanWallet</NavLink>
+            <NavLink class="navlink" to="/beta-wallet/" style={navStyle} activeStyle={activeNavStyle}>Beta Wallet</NavLink>
+            <NavLink class="navlink" to="/light-wallet/" style={navStyle} activeStyle={activeNavStyle}>Light Wallet</NavLink>
+            <NavLink class="navlink" to="/my-wan-wallet/" style={navStyle} activeStyle={activeNavStyle}>MyWanWallet</NavLink>
           </nav>
 
          
@@ -31,8 +30,6 @@ function App() {
             <Route path="/" component={Home}/>
           
         </Router>
-      
-    </div>
   );
 }
 
