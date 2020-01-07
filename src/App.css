@@ -2,10 +2,12 @@
 * {
   color: white;
   font-family: 'Roboto Mono', monospace;
+  
 }
 
 html, body {
   width: 100%;
+  font-size: 12px;
 }
 
 
@@ -23,9 +25,13 @@ code {
     monospace;
 }
 
+
 .preview-image {
   width: 300px;
   margin: 20px;
+  opacity: .5;
+  border: 10px solid black;
+  border-radius: 20px;
 }
 
 .beta-link::after{
@@ -45,7 +51,7 @@ code {
 .mww-link::after{
   content: "MyWanWallet.io Instructions";
   font-size: 1.8rem;
-  color: black;
+  color: white;
   display: inline-block;
   text-align: center;
   font-weight: 700;
@@ -119,6 +125,7 @@ a:hover {
 .info {
   max-width: 600px;
   margin: 30px auto;
+  font-size: 1.3rem;
 }
 
 iframe {

@@ -21,23 +21,15 @@ function App() {
             <NavLink class="navlink" exact to="/" style={navStyle} activeStyle={activeNavStyle}>Home</NavLink>
             <NavLink class="navlink" to="/beta-wallet" style={navStyle} activeStyle={activeNavStyle}>Beta Wallet</NavLink>
             <NavLink class="navlink" to="/light-wallet" style={navStyle} activeStyle={activeNavStyle}>Light Wallet</NavLink>
-            <NavLink class="navlink" to="/my-wan-wallet" style={navStyle} activeStyle={activeNavStyle}>My Wan Wallet</NavLink>
+            <NavLink class="navlink" to="/my-wan-wallet" style={navStyle} activeStyle={activeNavStyle}>MyWanWallet</NavLink>
           </nav>
 
-          <Switch>
-            <Route path="/beta-wallet">
-              <BetaWallet />
-            </Route>
-            <Route path="/light-wallet">
-              <LightWallet />
-            </Route>
-            <Route path="/my-wan-wallet">
-              <MyWanWallet />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+         
+            <Route path="/beta-wallet" component={BetaWallet}/>
+            <Route path="/light-wallet" component={LightWallet}/>
+            <Route path="/my-wan-wallet" component={MyWanWallet}/>
+            <Route path="/" component={Home}/>
+          
         </Router>
       
     </div>
