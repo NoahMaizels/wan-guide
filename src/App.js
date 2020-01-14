@@ -32,7 +32,7 @@ class App extends React.Component {
         <div className="header-background"></div>
    
         <nav className="navbar">
-          <img className ="logo" src={logo} alt="logo"/>
+          <a href="https://wanchain.org/" rel="noopener noreferrer" target="_blank"><img className ="logo" src={logo} alt="logo"/></a>
           <span onClick={this.burgerBarHandler} className="burger-bar">
             <FontAwesomeIcon  icon={faBars} size="3x" color="green"/>
           </span>
