@@ -8,7 +8,7 @@ const MyWanWallet = () => {
       </h1>
       <iframe className="video" title="My Wan Wallet" src="https://www.youtube.com/embed/V-UsaKPh3FI" frameborder="0" allowfullscreen="" id="1551239243"></iframe>
       <p class="info">
-        This video explains to you how you can easily stake Wanchain on <a href="www.mywanwallet.io">www.mywanwallet.io</a>  using your Trezor hardware wallet.
+        This video explains to you how you can easily stake Wanchain on <a href="https://mywanwallet.io/">https://mywanwallet.io/</a>  using your Trezor hardware wallet.
       </p>
     </div>
   )

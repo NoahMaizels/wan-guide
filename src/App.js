@@ -19,6 +19,9 @@ class App extends React.Component {
   burgerBarHandler = () => {
     this.setState({menuDisplay: !this.state.menuDisplay})
   }
+  linkHandler = () => {
+    this.setState({menuDisplay: !this.state.menuDisplay})
+  }
   render() {
     const activeNavStyle = {color: "rgb(0,165,255)", textDecoration: "underline",  marginRight: "30px"}
     const navStyle = {fontSize: "1.8rem", fontWeight: 700, color: "white", textDecoration: "none",  marginRight: "30px" }
@@ -34,10 +37,10 @@ class App extends React.Component {
             <FontAwesomeIcon  icon={faBars} size="3x" color="green"/>
           </span>
           <div className={`flex-container ${menuVis}`}>
-            <NavLink className="NavLink" exact to="/" style={navStyle} activeStyle={activeNavStyle}>Home</NavLink>
-            <NavLink className="NavLink" to="/beta-wallet/" style={navStyle} activeStyle={activeNavStyle}>Beta Wallet</NavLink>
-            <NavLink className="NavLink" to="/light-wallet/" style={navStyle} activeStyle={activeNavStyle}>Light Wallet</NavLink>
-            <NavLink className="NavLink" to="/my-wan-wallet/" style={navStyle} activeStyle={activeNavStyle}>MyWanWallet</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" exact to="/" style={navStyle} activeStyle={activeNavStyle}>Home</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" to="/beta-wallet/" style={navStyle} activeStyle={activeNavStyle}>Beta Wallet</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" to="/light-wallet/" style={navStyle} activeStyle={activeNavStyle}>Light Wallet</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" to="/my-wan-wallet/" style={navStyle} activeStyle={activeNavStyle}>MyWanWallet</NavLink>
           </div>
         </nav>
 
