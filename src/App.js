@@ -2,8 +2,10 @@ import React from 'react';
 import './App.css';
 import { HashRouter as Router, NavLink, Route, Switch } from 'react-router-dom'
 import Home from './pages/home'
-import BetaWallet from './pages/betawallet'
 import LightWallet from './pages/lightwallet'
+import Staking from './pages/staking'
+import DAppStore from './pages/dappstore'
+import CrossChain from './pages/crosschain'
 import MyWanWallet from './pages/mywanwallet'
 import logo from './images/wanchain-logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -38,15 +40,19 @@ class App extends React.Component {
           </span>
           <div className={`flex-container ${menuVis}`}>
             <NavLink onClick={this.linkHandler} className="NavLink" exact to="/" style={navStyle} activeStyle={activeNavStyle}>Home</NavLink>
-            <NavLink onClick={this.linkHandler} className="NavLink" to="/beta-wallet/" style={navStyle} activeStyle={activeNavStyle}>Beta Wallet</NavLink>
-            <NavLink onClick={this.linkHandler} className="NavLink" to="/light-wallet/" style={navStyle} activeStyle={activeNavStyle}>Light Wallet</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" to="/light-wallet/" style={navStyle} activeStyle={activeNavStyle}>Light-Wallet</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" to="/staking/" style={navStyle} activeStyle={activeNavStyle}>Staking</NavLink>
             <NavLink onClick={this.linkHandler} className="NavLink" to="/my-wan-wallet/" style={navStyle} activeStyle={activeNavStyle}>MyWanWallet</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" to="/dapp-store/" style={navStyle} activeStyle={activeNavStyle}>DApp-Store</NavLink>
+            <NavLink onClick={this.linkHandler} className="NavLink" to="/cross-chain/" style={navStyle} activeStyle={activeNavStyle}>Cross-Chain</NavLink>
           </div>
         </nav>
 
         <Switch>
-          <Route path="/beta-wallet/" component={BetaWallet}/>
           <Route path="/light-wallet/" component={LightWallet}/>
+          <Route path="/staking/" component={Staking}/>
+          <Route path="/dapp-store/" component={DAppStore}/>
+          <Route path="/cross-chain/" component={CrossChain}/>
           <Route path="/my-wan-wallet/" component={MyWanWallet}/>
           <Route path="/" component={Home}/>
         </Switch>

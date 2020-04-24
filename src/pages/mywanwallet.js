@@ -10,6 +10,9 @@ const MyWanWallet = () => {
       <p class="info">
         This video explains to you how you can easily stake Wanchain on <a rel="noopener noreferrer" target="_blank" href="https://mywanwallet.io/">https://mywanwallet.io/</a>  using your Trezor hardware wallet.
       </p>
+      <p className="info">
+      For more information and downloads please navigate to the <a rel="noopener noreferrer" target="_blank" href="https://www.wanchain.org/getstarted/">Wanchain official website</a>.
+      </p>
     </div>
   )
 }
