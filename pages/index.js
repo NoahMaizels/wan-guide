@@ -144,6 +144,11 @@ function HomePage() {
       border-radius: 20px;
     }
 
+  @media(max-width: 800px) {
+    .preview-link {
+      width: 300px;
+    }
+  }
   `}</style>
   </Layout>
   )

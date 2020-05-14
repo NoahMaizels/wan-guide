@@ -119,6 +119,17 @@ const CrossChain = () =>{
         table {
           margin: auto;
         }
+        @media(max-width: 800px) {
+          th, td {
+            padding-left: 5px;
+          }
+          th {
+            font-size: 1.1rem;
+          }
+          td {
+            font-size: .8rem;
+          }
+        }
       `}
       </style>
     </Layout>
