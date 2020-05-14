@@ -85,6 +85,9 @@ function HomePage() {
     }
     
     .preview-link {
+      -webkit-box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
+      -moz-box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
+      box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
       vertical-align: top;
       display: inline-block;
       background-size: cover;
@@ -113,10 +116,7 @@ function HomePage() {
     .staking-link {
       background-image: url("/staking.png")
     }
-    .title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+   
     .subtitle {
       max-width: 500px;
       margin: auto;

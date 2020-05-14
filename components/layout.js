@@ -94,8 +94,8 @@ export default function Layout(props) {
         }
         .navbar {
           -webkit-box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
--moz-box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
-box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
+          -moz-box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
+          box-shadow: 0px 0px 7px 3px rgba(184,184,184,1);
         }
       `}</style>
     
