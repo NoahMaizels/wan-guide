@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = (function(a){return {"/":[a],"/crosschain":[a],"/dappstore":[a],"/index":[a],"/lightwallet":[a],"/mywanwallet":[a],"/staking":[a],"/wan-army":[a]}}("static\u002Fchunks\u002Fbb804483544d54211bb4e40cf789088487519ee9.f38acefd48a01722f80c.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
