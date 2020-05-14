@@ -40,7 +40,7 @@ const CrossChain = () =>{
               Wan Troops Unite!
             </h2>
             <h2 className="has-text-white is-size-7 subtitle">
-              Updated at: {Date(data.updateTime)}
+              Updated at: {data.updateTime}
             </h2>
             <div>
             <table>
