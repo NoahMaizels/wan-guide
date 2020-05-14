@@ -7,17 +7,17 @@ import fetch from 'node-fetch'
 const CrossChain = () =>{
   const [data, setData] = useState({ ranks: 
     {
-      generals: 0, // > 10 million
-      colonels: 0, // 10 million to 1 million
-      majors: 0,   // 1 million to 500 thousand
-      captains: 0, // 500 thousand to 100 thousand
-      lieutenants: 0, // 100 thousand to 50 thousand
-      sergeants: 0 , // 50 thousand to 10 thousand
-      corporal: 0, // 10 thousand to 5 thousand
-      specialist: 0, // 5 thousand to 1 thousand
-      private: 0 // 1 thousand to 500
+      generals: "", // > 10 million
+      colonels: "", // 10 million to 1 million
+      majors: "",   // 1 million to 500 thousand
+      captains: "", // 500 thousand to 100 thousand
+      lieutenants: "", // 100 thousand to 50 thousand
+      sergeants: "", // 50 thousand to 10 thousand
+      corporal: "", // 10 thousand to 5 thousand
+      specialist: "", // 5 thousand to 1 thousand
+      private: "" // 1 thousand to 500
     },
-    updateTime: Date.now(),
+    updateTime: "",
   })
   useEffect(() => {
     fetch("https://vast-stream-09242.herokuapp.com/")
