@@ -78,10 +78,7 @@ export default function Layout(props) {
                     <a className="navbar-item">Staking</a>
                   </Link>
                 
-                <hr className="navbar-divider"/>
-                <a className="navbar-item">
-                  Report an issue
-                </a>
+                
               </div>
             </div>
           </div>
