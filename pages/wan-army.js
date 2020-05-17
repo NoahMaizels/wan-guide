@@ -19,7 +19,7 @@ const CrossChain = () =>{
     },
     updateTime: "",
   })
-  const [rankInfo, setRankInfo] = useState("-------")
+  const [rankInfo, setRankInfo] = useState("---_----")
   const [inputValue, setInputValue] = useState("")
 
   useEffect(() => {
