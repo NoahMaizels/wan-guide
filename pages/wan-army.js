@@ -19,6 +19,9 @@ const CrossChain = () =>{
     },
     updateTime: "",
   })
+  const [rankInfo, setRankInfo] = useState("-------")
+  const [inputValue, setInputValue] = useState("")
+
   useEffect(() => {
     fetch("https://vast-stream-09242.herokuapp.com/")
       .then(rawData => rawData.json())
@@ -27,6 +30,20 @@ const CrossChain = () =>{
       })
       .catch(err => console.log(err))
   }, [])
+
+  const buttonHandler = (event) => {
+    setRankInfo("Loading...")
+    fetch(`https://vast-stream-09242.herokuapp.com/getrank/${inputValue}`)
+    .then(rawData => rawData.json())
+    .then(json => {
+      setRankInfo(json.message)
+      setInputValue("")
+    })
+    .catch(err => console.log(err))  
+  }
+  const inputChangeHandler = (event) => {
+    setInputValue(event.target.value)
+  }
 
   return (
     <Layout>
@@ -39,6 +56,20 @@ const CrossChain = () =>{
             <h2 className="has-text-white subtitle">
               Wan Troops Unite!
             </h2>
+
+            <div className="field has-addons has-addons-centered">
+              <div className="control">
+                <input onChange={inputChangeHandler} className="input" value={inputValue} type="text" placeholder="Find your rank" />
+              </div>
+              <div className="control">
+                <a onClick={buttonHandler} className="button is-dark">
+                  Search
+                </a>
+              </div>
+            </div>
+            <div className="results">
+              {rankInfo}
+            </div>
             <h2 className="has-text-white is-size-7 subtitle">
               Updated at: {data.updateTime}
             </h2>
@@ -105,6 +136,9 @@ const CrossChain = () =>{
         .title {
           text-align: center;
           margin-bottom: 50px;
+        }
+        .results {
+          margin: 20px 0px;
         }
         th {
           font-size: 1.5rem;
