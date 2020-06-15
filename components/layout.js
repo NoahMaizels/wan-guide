@@ -48,9 +48,9 @@ export default function Layout(props) {
                 Home
               </a>
             </Link>
-            <Link href="/wan-army">
+            <Link href="/wan-brigade">
               <a className="navbar-item">
-                Wan-Army
+                Wan-Brigade
               </a>
             </Link>
             <a href="https://www.explorewanchain.org/#/wallet_and_tools/wan-wallet" target="_blank" className="navbar-item">

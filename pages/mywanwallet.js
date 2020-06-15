@@ -1,7 +1,7 @@
 import Layout from "../components/layout"
 import VideoGuide from "../components/videoGuide"
 
-const CrossChain = () =>{
+const MyWanWallet = () =>{
   return (
     <Layout>
       <VideoGuide
@@ -14,4 +14,4 @@ const CrossChain = () =>{
   )
 }
 
-export default CrossChain
+export default MyWanWallet

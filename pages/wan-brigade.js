@@ -4,26 +4,26 @@ import { useEffect, useState } from "react"
 import fetch from 'node-fetch'
 
 
-const CrossChain = () =>{
+const WanBrigade = () =>{
   const [data, setData] = useState({ ranks: 
     {
-      generals: "", // > 10 million
-      colonels: "", // 10 million to 1 million
-      majors: "",   // 1 million to 500 thousand
-      captains: "", // 500 thousand to 100 thousand
-      lieutenants: "", // 100 thousand to 50 thousand
-      sergeants: "", // 50 thousand to 10 thousand
-      corporal: "", // 10 thousand to 5 thousand
-      specialist: "", // 5 thousand to 1 thousand
-      private: "" // 1 thousand to 500
+      generals: "Loading...", // > 10 million
+      colonels: "Loading...", // 10 million to 1 million
+      majors: "Loading...",   // 1 million to 500 thousand
+      captains: "Loading...", // 500 thousand to 100 thousand
+      lieutenants: "Loading...", // 100 thousand to 50 thousand
+      sergeants: "Loading...", // 50 thousand to 10 thousand
+      corporal: "Loading...", // 10 thousand to 5 thousand
+      specialist: "Loading...", // 5 thousand to 1 thousand
+      private: "Loading..." // 1 thousand to 500
     },
-    updateTime: "",
+    updateTime: "Loading...",
   })
-  const [rankInfo, setRankInfo] = useState("---_----")
+  const [rankInfo, setRankInfo] = useState("-------")
   const [inputValue, setInputValue] = useState("")
 
   useEffect(() => {
-    fetch("https://vast-stream-09242.herokuapp.com/")
+    fetch("https://vast-stream-09242.herokuapp.com/", )
       .then(rawData => rawData.json())
       .then(json => {
         setData(json)
@@ -33,7 +33,19 @@ const CrossChain = () =>{
 
   const buttonHandler = (event) => {
     setRankInfo("Loading...")
-    fetch(`https://vast-stream-09242.herokuapp.com/getrank/${inputValue}`)
+    fetch("https://vast-stream-09242.herokuapp.com/getrank", {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify({address: inputValue}) // body data type must match "Content-Type" header
+    })
     .then(rawData => rawData.json())
     .then(json => {
       setRankInfo(json.message)
@@ -51,7 +63,7 @@ const CrossChain = () =>{
         <div className="hero-body">
           <div className="container has-text-centered">
             <h1 className="has-text-white title">
-              Wan Army
+              Wan Brigade
             </h1>
             <h2 className="has-text-white subtitle">
               Wan Troops Unite!
@@ -59,7 +71,7 @@ const CrossChain = () =>{
 
             <div className="field has-addons has-addons-centered">
               <div className="control">
-                <input onChange={inputChangeHandler} className="input" value={inputValue} type="text" placeholder="Find your rank" />
+                <input onChange={inputChangeHandler} className="input" value={inputValue} type="text" placeholder="Public address" />
               </div>
               <div className="control">
                 <a onClick={buttonHandler} className="button is-dark">
@@ -78,7 +90,7 @@ const CrossChain = () =>{
               <tr>
                 <th className="has-text-white">Rank</th>
                 <th className="has-text-white">Comrades</th>
-                <th className="has-text-white">WAN Held</th>
+                <th className="has-text-white">WAN Held (Includes staked WAN)</th>
               </tr>
               <tr>
                 <td>General</td>
@@ -137,8 +149,10 @@ const CrossChain = () =>{
           text-align: center;
           margin-bottom: 50px;
         }
+    
         .results {
-          margin: 20px 0px;
+          margin: 20px auto;
+          max-width: 800px;
         }
         th {
           font-size: 1.5rem;
@@ -170,4 +184,4 @@ const CrossChain = () =>{
   )
 }
 
-export default CrossChain
+export default WanBrigade
